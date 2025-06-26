@@ -242,6 +242,9 @@
   background: #fff;
   padding-top: 0 !important;
   margin-top: 0 !important;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Rimuovo sottolineatura dalle voci del menu */
@@ -684,4 +687,10 @@
 .nav a:focus {
   color: var(--pink) !important;
   transition: color 0.2s;
+}
+
+.header-maxwidth {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
 }

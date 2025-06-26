@@ -123,3 +123,15 @@ function ioblue_custom_enqueue_swiper() {
     wp_enqueue_script('ioblue-slider', get_template_directory_uri() . '/assets/js/slider.js', array('swiper'), null, true);
 }
 add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_swiper');
+
+function ioblue_custom_enqueue_home_css() {
+    if (is_front_page() || is_home()) {
+        wp_enqueue_style(
+            'ioblue-home',
+            get_template_directory_uri() . '/assets/css/home.css',
+            array(),
+            filemtime(get_template_directory() . '/assets/css/home.css')
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_home_css');

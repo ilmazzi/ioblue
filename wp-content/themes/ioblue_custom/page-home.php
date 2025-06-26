@@ -24,10 +24,10 @@ get_header(); ?>
       <div class="swiper-slide slide-2">
         <div class="slider-boxes">
           <div class="slider-box-rosa">
-            INNOVAZIONE TECNOLOGICA
+            I NOSTRI PRODOTTI
           </div>
           <div class="slider-box-bianco">
-            <strong>IOBLUE</strong> porta l'innovazione tecnologica nel settore healthcare con soluzioni all'avanguardia.
+            <p><strong>IOBLUE</strong> porta l'innovazione tecnologica nel settore healthcare con soluzioni all'avanguardia.</p>
           </div>
         </div>
       </div>
@@ -35,11 +35,12 @@ get_header(); ?>
       <!-- Slide 3 -->
       <div class="swiper-slide slide-3">
         <div class="slider-boxes">
-          <div class="slider-box-rosa">
-            CONNESSIONI INTELLIGENTI
+          <div class="slider-box-blu">
+            R&amp;D
           </div>
           <div class="slider-box-bianco">
-            <strong>IOBLUE</strong> crea connessioni intelligenti che trasformano il modo di lavorare in ambito sanitario.
+            <p> Agiamo con il partner per favorire un processo<br>
+            di <strong>continua innovazione scientifica e/o tecnologica</strong></p>
           </div>
         </div>
       </div>
@@ -47,11 +48,23 @@ get_header(); ?>
       <!-- Slide 4 -->
       <div class="swiper-slide slide-4">
         <div class="slider-boxes">
-          <div class="slider-box-rosa">
-            FUTURO DELLA SANITÀ
+          <div class="slider-box-blu">
+            PARTNERING
           </div>
           <div class="slider-box-bianco">
-            <strong>IOBLUE</strong> disegna il futuro della sanità con tecnologie innovative e soluzioni sostenibili.
+            <p>Per <strong>IOBLUE</strong> sono <strong>tre</strong> i <strong>pilastri</strong> 
+            della <strong>collaborazione strategica</strong>:</p>
+          </div>
+          <div class="slider-pilastri-row">
+            <div class="slider-box-pilastro1">
+              <strong>1.</strong> Fiducia reciproca
+            </div>
+            <div class="slider-box-pilastro2">
+              <strong>2.</strong> Impegni condivisi
+            </div>
+            <div class="slider-box-pilastro3">
+              <strong>3.</strong> Obiettivi comuni
+            </div>
           </div>
         </div>
       </div>
@@ -61,6 +74,17 @@ get_header(); ?>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
+  <section class="bg-home-background">
+    <div class="bg-home-background-inner">
+      <div class="home-hero-text">
+        Siamo presenti sul <strong>mercato farmaceutico dal 2016</strong><br>
+        con l'<strong>obiettivo</strong> di essere un partner forte per lo <strong>sviluppo del business</strong><br>
+        delle piccole e delle medie imprese nel <strong>settore healthcare</strong>.<br><br>
+        <strong>Connettiamo aziende nazionali ed internazionali</strong><br>
+        offrendo soluzioni per favorire collaborazioni strategiche.
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>

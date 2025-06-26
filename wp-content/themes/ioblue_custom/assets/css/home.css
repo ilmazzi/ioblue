@@ -1,0 +1,104 @@
+/* Home page background section - esagoni */
+.bg-home-background {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.bg-home-background-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 1920/600;
+  background-image: url('../images/bg-home.svg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+
+/* Media query per tablet */
+@media (max-width: 991.98px) {
+  .bg-home-background-inner {
+    aspect-ratio: 1024/500;
+  }
+}
+
+/* Media query mobile e small device */
+@media (max-width: 575.98px) {
+  .bg-home-background-inner {
+    aspect-ratio: 390/400;
+  }
+  .home-hero-text {
+    position: absolute;
+    top: 10vw;
+    left: 2vw;
+    width: 96vw;
+    height: auto;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #006798;
+    text-align: center;
+    background: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    display: block;
+  }
+  .home-hero-text strong {
+    font-weight: 500;
+    color: #006798;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .home-hero-text {
+    position: absolute;
+    top: 7vw;
+    left: 5vw;
+    width: 90vw;
+    height: auto;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #006798;
+    text-align: center;
+    background: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    display: block;
+  }
+  .home-hero-text strong {
+    font-weight: 500;
+    color: #006798;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-hero-text {
+    position: absolute;
+    top: 190px;
+    left: 517px;
+    width: 886px;
+    height: 217px;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    color: #006798;
+    text-align: center;
+    background: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    display: block;
+  }
+  .home-hero-text strong {
+    font-weight: 500;
+    color: #006798;
+  }
+} 
