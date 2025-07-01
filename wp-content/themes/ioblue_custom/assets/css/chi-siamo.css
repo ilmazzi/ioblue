@@ -1,0 +1,130 @@
+
+
+.chi-siamo-wrapper {
+  position: relative;
+  max-width: 1920px;
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  
+}
+
+.chi-siamo-box {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  background-image: url('../images/box-titolo-blu.svg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'tenso', Arial, sans-serif;
+  font-weight: var(--font-weight-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .chi-siamo-container {
+    background-image: url('../images/bg-chi-siamo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 1920px;
+
+    margin: -6% 0 0 0;
+    overflow: hidden;
+    padding: 15%;
+    box-sizing: border-box;
+    background-position: center;
+ }
+ .chi-siamo-descrizione {
+    background-color: #fff;
+    font-family: 'tenso', Arial, sans-serif;
+    color:var(--color-blue);
+    border: 2px solid var(--color-blue);
+    font-weight: var(--font-weight-light);
+ }
+
+ .chi-siamo-descrizione strong {
+    font-weight: var(--font-weight-medium);
+ }
+@media (min-width: 992px) {
+.chi-siamo-box {
+   
+    min-width: 374px;
+    min-height: 110px;
+    
+    font-weight: var(--font-weight-light);
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: -2%;
+   
+    align-items: center;
+    justify-content: center !important;
+    display: flex;
+    transform: translate(0, -50%);
+    
+}
+  .chi-siamo-descrizione {
+    max-width: 1362px;
+    padding: 32px 24px;
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 40px auto 0 auto;
+    border-width: 2px;
+  }
+  .chi-siamo-descrizione p {
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 575.98px) {
+    .chi-siamo-box {
+        text-align: center;
+        width: 138px;
+        height: 40px;
+       top:35%;
+       left: 5%;
+       align-items: center;
+       justify-content: center !important;
+       display: flex;
+       font-size: 18px;
+
+    }
+    .chi-siamo-descrizione {
+        font-size: 15px;
+        max-width: 350px;
+        padding: 10px 10px 10px 10px;
+    }
+    .chi-siamo-descrizione p {
+        margin-bottom: 10px;
+        line-height: 17px;
+    }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .chi-siamo-box {
+        text-align: center;
+        width: 206px;
+        height: 60px;
+        font-size: 27px;
+       top:35%;
+       left: 5%;
+       align-items: center;
+       justify-content: center !important;
+       display: flex;
+    }
+    .chi-siamo-descrizione {
+        font-size: 15px;
+        max-width: 531px;
+        padding: 10px 10px 10px 10px;
+        margin: 0 auto;
+    }
+    .chi-siamo-descrizione p {
+        margin-bottom: 10px;
+        line-height: 17px;
+    }
+    .chi-siamo-container {
+       text-align: center;
+    }
+}

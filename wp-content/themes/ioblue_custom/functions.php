@@ -30,16 +30,8 @@ add_action('after_setup_theme', 'ioblue_custom_setup');
 
 /**
  * ============================================================
- * Enqueue assets – ioblue_custom
- * Carica tutti i file CSS e JS suddivisi in cartelle:
- * - /assets/css/reset.css
- * - /assets/css/variables.css
- * - /assets/css/layout.css
- * - /assets/css/header.css
- * - /assets/css/footer.css
- * - /assets/css/component.css
- * - /assets/css/main.css (ultimo, contiene override globali)
- * - /assets/js/main.js (funzioni JS generiche, incluso hamburger)
+ * Enqueue assets – ioblue_custom (unificato)
+ * Carica tutti i file CSS e JS, inclusi slider, Swiper, home.css e chi-siamo.css
  * ============================================================
  */
 function ioblue_custom_enqueue_assets() {
@@ -52,7 +44,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/reset.css')
     );
-
     // CSS VARIABILI GLOBALI
     wp_enqueue_style(
         'ioblue-variables',
@@ -60,7 +51,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/variables.css')
     );
-
     // CSS LAYOUT STRUTTURALE
     wp_enqueue_style(
         'ioblue-layout',
@@ -68,7 +58,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/layout.css')
     );
-
     // CSS HEADER
     wp_enqueue_style(
         'ioblue-header',
@@ -76,7 +65,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/header.css')
     );
-
     // CSS FOOTER
     wp_enqueue_style(
         'ioblue-footer',
@@ -84,7 +72,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/footer.css')
     );
-
     // CSS COMPONENTI UI (pulsanti, card, ecc.)
     wp_enqueue_style(
         'ioblue-component',
@@ -92,7 +79,6 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/component.css')
     );
-
     // CSS PRINCIPALE (override finali, media query globali)
     wp_enqueue_style(
         'ioblue-main',
@@ -100,7 +86,38 @@ function ioblue_custom_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/main.css')
     );
-
+    // SLIDER CSS
+    wp_enqueue_style('ioblue-slider', get_template_directory_uri() . '/assets/css/slider.css', array(), null);
+    // SWIPER
+    wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('ioblue-slider', get_template_directory_uri() . '/assets/js/slider.js', array('swiper'), null, true);
+    // HOME CSS solo in home/front page
+    if (is_front_page() || is_home()) {
+        wp_enqueue_style(
+            'ioblue-home',
+            get_template_directory_uri() . '/assets/css/home.css',
+            array(),
+            filemtime(get_template_directory() . '/assets/css/home.css')
+        );
+    }
+    // CHI SIAMO CSS solo se template Chi Siamo IobLue
+    if (is_page_template('chi-siamo.php')) {
+        wp_enqueue_style(
+            'ioblue-chi-siamo',
+            get_template_directory_uri() . '/assets/css/chi-siamo.css',
+            array(),
+            filemtime(get_template_directory() . '/assets/css/chi-siamo.css')
+        );
+    }
+    if (is_page_template('mission.php')) {
+        wp_enqueue_style(
+            'ioblue-mission',
+            get_template_directory_uri() . '/assets/css/mission.css',
+            array(),
+            filemtime(get_template_directory() . '/assets/css/chi-siamo.css')
+        );
+    }
     // JS PRINCIPALE (hamburger toggle, interazioni JS generiche)
     wp_enqueue_script(
         'ioblue-main-js',
@@ -111,27 +128,3 @@ function ioblue_custom_enqueue_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_assets');
-
-function ioblue_custom_enqueue_styles() {
-    wp_enqueue_style('ioblue-slider', get_template_directory_uri() . '/assets/css/slider.css', array(), null);
-}
-add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_styles');
-
-function ioblue_custom_enqueue_swiper() {
-    wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
-    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
-    wp_enqueue_script('ioblue-slider', get_template_directory_uri() . '/assets/js/slider.js', array('swiper'), null, true);
-}
-add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_swiper');
-
-function ioblue_custom_enqueue_home_css() {
-    if (is_front_page() || is_home()) {
-        wp_enqueue_style(
-            'ioblue-home',
-            get_template_directory_uri() . '/assets/css/home.css',
-            array(),
-            filemtime(get_template_directory() . '/assets/css/home.css')
-        );
-    }
-}
-add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_home_css');
