@@ -1,0 +1,1114 @@
+/* ========================================
+   SLIDER CSS - STRUTTURA CHIARA E SPECIFICA
+   ======================================== */
+
+/* ========================================
+   1. VARIABILI CSS
+   ======================================== */
+:root {
+  --font-family-tenso: 'tenso', 'Tenso', 'Tenso Light', Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --color-primary: #333;
+  --color-white: #fff;
+  --color-pink: #E5AFB9;
+  --color-blue: #006798;
+}
+
+/* ========================================
+   2. CONTAINER E STRUTTURA BASE
+   ======================================== */
+.slider-fullwidth {
+  width: 100%;
+  max-width: 1920px;
+  height: 793px;
+  min-height: 220px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  height: 100% !important;
+}
+
+.swiper-slide {
+  position: relative;
+  min-height: 220px !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.slider-boxes {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: none !important;
+}
+
+/* ========================================
+   3. ANIMAZIONI
+   ======================================== */
+.animate-fadein {
+  opacity: 0;
+  animation: fadein 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: up 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadein {
+  to { opacity: 1; }
+}
+
+@keyframes up {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   4. LAYOUT DESKTOP (default)
+   ======================================== */
+
+/* Backgrounds desktop */
+.slide-1 { background-image: url('../images/slide-1-desktop.png'); }
+.slide-2 { background-image: url('../images/slide-2-desktop.png'); }
+.slide-3 { background-image: url('../images/slide-3-desktop.png'); }
+.slide-4 { background-image: url('../images/slide-4-desktop.png'); }
+
+/* ========================================
+   5. LAYOUT TABLET (768px - 991.98px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Container e slide */
+  .slider-fullwidth,
+  .swiper-slide {
+    height: 302px !important;
+    min-height: 302px !important;
+  }
+  
+  /* Backgrounds tablet */
+  .slide-1 { background-image: url('../images/slide-1-tablet.png'); }
+  .slide-2 { background-image: url('../images/slide-2-tablet.png'); }
+  .slide-3 { background-image: url('../images/slide-3-tablet.png'); }
+  .slide-4 { background-image: url('../images/slide-4-tablet.png'); }
+  
+  /* Slide 1 - Box specifici tablet */
+  .slide-1 .slider-box-rosa {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 377px;
+    height: 52px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  
+  .slide-1 .slider-box-bianco {
+    position: absolute;
+    top: 110px;
+    left: 27px;
+    width: 382px;
+    height: 91px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    text-align: left;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 !important;
+    pointer-events: auto;
+    margin: 0 !important;
+    color: var(--color-blue);
+  }
+  
+  .slide-1 .slider-box-bianco p {
+    width: 400px !important;
+    padding: 20px 19px 27px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    text-align: left !important;
+    line-height: 19px !important;
+    margin: 0;
+  }
+
+  /* Slide 2 - Box specifici tablet */
+  .slide-2 .slider-box-rosa {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 377px;
+    height: 52px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-2 .slider-box-bianco {
+    position: absolute;
+    top: 110px;
+    left: 27px;
+    width: 410px;
+    height: 75px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    text-align: left;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    color: var(--color-blue);
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-2 .slider-box-bianco p {
+    padding: 20px 19px 27px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    line-height: 19px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-2 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  /* Frecce Swiper personalizzate per tablet */
+  .swiper-button-prev {
+    top: 240px !important;
+    left: 27px !important;
+    width: 34px !important;
+    height: 34px !important;
+    background-image: url('../images/freccia-tablet-sx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-next {
+    top: 240px !important;
+    left: 72px !important;
+    width: 34px !important;
+    height: 34px !important;
+    background-image: url('../images/freccia-tablet-dx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none !important;
+  }
+
+  .slide-3 .slider-box-blu {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 189px;
+    height: 52px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-3 .slider-box-bianco {
+    position: absolute;
+    top: 110px;
+    left: 27px;
+    width: 475px;
+    height: 75px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 12px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-3 .slider-box-bianco p {
+    padding: 20px 19px 15px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+  }
+
+  .slide-4 .slider-box-pilastro1 {
+    position: absolute;
+    top: 167px;
+    left: 27px;
+    width: 164px;
+    height: 35px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro2 {
+    position: absolute;
+    top: 167px;
+    left: 204px;
+    width: 164px;
+    height: 35px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro3 {
+    position: absolute;
+    top: 167px;
+    left: 380px;
+    width: 164px;
+    height: 35px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+
+  .slide-4 .slider-box-blu {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 189px;
+    height: 52px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-4 .slider-box-bianco {
+    position: absolute;
+    top: 110px;
+    left: 27px;
+    width: 561px;
+    height: 49px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 12px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-4 .slider-box-bianco p {
+    padding: 20px 19px 15px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+  }
+
+  .slide-1 .slider-box-bianco strong,
+  .slide-2 .slider-box-bianco strong,
+  .slide-3 .slider-box-bianco strong,
+  .slide-4 .slider-box-bianco strong,
+  .slide-4 .slider-box-pilastro1 strong,
+  .slide-4 .slider-box-pilastro2 strong,
+  .slide-4 .slider-box-pilastro3 strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+}
+
+/* ========================================
+   6. LAYOUT MOBILE (max-width: 767.98px)
+   ======================================== */
+@media (max-width: 767.98px) {
+  /* Container e slide */
+  .slider-fullwidth,
+  .swiper-slide {
+    height: 220px;
+    min-height: 220px;
+  }
+  
+  /* Backgrounds mobile */
+  .slide-1 { background-image: url('../images/slide-1-mobile.png'); }
+  .slide-2 { background-image: url('../images/slide-2-mobile.png'); }
+  .slide-3 { background-image: url('../images/slide-3-mobile.png'); }
+  .slide-4 { background-image: url('../images/slide-4-mobile.png'); }
+  
+  /* Slide 1 - Box specifici mobile */
+  .slide-1 .slider-box-rosa {
+    position: absolute;
+    top: 69px;
+    left: 30px;
+    width: 264px;
+    height: 36px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    z-index: 3;
+    pointer-events: auto;
+  }
+  
+  .slide-1 .slider-box-bianco {
+    top: 97px;
+    left: 38px;
+    width: 268px !important;
+    height: 64px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    padding: 0 !important;
+    font-size: 12px;
+    line-height: 12px;
+    z-index: 1;
+    box-sizing: border-box;
+    position: absolute;
+    pointer-events: auto;
+  }
+  
+  .slide-1 .slider-box-bianco p {
+    padding: 16px 19px 15px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+  }
+
+  /* Slide 2 - Box specifici mobile */
+  .slide-2 .slider-box-rosa {
+    position: absolute;
+    top: 70px;
+    left: 29px;
+    width: 192px;
+    height: 36px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    z-index: 3;
+    pointer-events: auto;
+  }
+
+  .slide-2 .slider-box-bianco {
+    position: absolute;
+    top: 98px;
+    left: 37px;
+    width: 251px;
+    height: 50px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 8px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-2 .slider-box-bianco p {
+    padding: 20px 19px 15px 15px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+  }
+
+  .slide-2 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  /* Slide 3 - Box specifici mobile */
+  .slide-3 .slider-box-blu {
+    top: 70px;
+    left: 29px;
+    width: 74px !important;
+    height: 36px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    position: absolute;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-3 .slider-box-bianco {
+    position: absolute;
+    top: 98px;
+    left: 37px;
+    width: 283px !important;
+    height: 50px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 13px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 8px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-3 .slider-box-bianco p {
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 13px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-3 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  /* Slide 4 - Box specifici mobile */
+  .slide-4 .slider-box-blu {
+    position: absolute;
+    top: 55px;
+    left: 29px;
+    width: 138px !important;
+    height: 36px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-4 .slider-box-bianco {
+    position: absolute;
+    top: 83px;
+    left: 37px;
+    width: 195px !important;
+    height: 50px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 13px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 8px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-4 .slider-box-bianco p {
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 12px !important;
+    line-height: 13px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-4 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  /* Frecce Swiper personalizzate per mobile */
+  .swiper-button-prev {
+    top: 193px !important;
+    left: 37px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url('../images/freccia-mobile-sx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-next {
+    top: 193px !important;
+    left: 69px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url('../images/freccia-mobile-dx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none !important;
+  }
+
+  .slide-4 .slider-box-pilastro1 {
+    position: absolute;
+    top: 137px;
+    left: 38px;
+    width: 100px;
+    height: 29px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro2 {
+    position: absolute;
+    top: 137px;
+    left: 143px;
+    width: 100px;
+    height: 29px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro3 {
+    position: absolute;
+    top: 137px;
+    left: 248px;
+    width: 100px;
+    height: 29px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+
+  .slide-1 .slider-box-rosa p {
+    padding: 0 !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 18px !important;
+    color: var(--color-white) !important;
+    margin: 0;
+  }
+
+  .slide-1 .slider-box-bianco strong,
+  .slide-1 .slider-box-rosa strong,
+  .slide-2 .slider-box-bianco strong,
+  .slide-2 .slider-box-rosa strong,
+  .slide-3 .slider-box-bianco strong,
+  .slide-3 .slider-box-blu strong,
+  .slide-4 .slider-box-bianco strong,
+  .slide-4 .slider-box-blu strong,
+  .slide-4 .slider-box-pilastro1 strong,
+  .slide-4 .slider-box-pilastro2 strong,
+  .slide-4 .slider-box-pilastro3 strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider-pilastri-row {
+    display: block;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-blue) !important;
+  opacity: 0.3;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-blue) !important;
+  opacity: 1;
+} 
+
+/* Frecce Swiper personalizzate per desktop */
+@media (min-width: 992px) {
+  .swiper-button-prev {
+    top: 640px !important;
+    left: 98px !important;
+    width: 47px !important;
+    height: 47px !important;
+    background-image: url('../images/freccia-desktop-sx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-next {
+    top: 640px !important;
+    left: 161px !important;
+    width: 47px !important;
+    height: 47px !important;
+    background-image: url('../images/freccia-desktop-dx.png');
+    position: absolute !important;
+    z-index: 1000 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none !important;
+  }
+
+  .slide-4 .slider-box-pilastro1 {
+    position: absolute;
+    top: 537px;
+    left: 106px;
+    width: 267px;
+    height: 57px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro2 {
+    position: absolute;
+    top: 537px;
+    left: 393px;
+    width: 267px;
+    height: 57px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro2 strong {
+    font-weight: var(--font-weight-medium);
+  }
+  .slide-4 .slider-box-pilastro3 {
+    position: absolute;
+    top: 537px;
+    left: 680px;
+    width: 267px;
+    height: 57px;
+    background: transparent url('../images/Rettangolo-312.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso), Arial, sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+    color: #E5AFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  .slide-4 .slider-box-pilastro3 strong {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .slide-3 .slider-box-blu {
+    position: absolute;
+    top: 371px;
+    left: 83px;
+    width: 127px;
+    height: 70px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 35px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-2 .slider-box-rosa {
+    position: absolute;
+    top: 371px;
+    left: 80px;
+    width: 376px;
+    height: 70px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 35px !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+
+  .slide-2 .slider-box-bianco {
+    position: absolute;
+    top: 426px;
+    left: 95px;
+    width: 637px;
+    height: 102px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    line-height: 28px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 20px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-2 .slider-box-bianco p {
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    line-height: 28px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-2 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  .slide-1 .slider-box-rosa {
+    position: absolute;
+    top: 360px;
+    left: 71px;
+    width: 515px;
+    height: 71px;
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 35px !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-1 .slider-box-bianco {
+    position: absolute;
+    top: 418px;
+    left: 86px;
+    width: 723px !important;
+    height: 99px;
+    background: transparent url('../images/Rettangolo-311.png') 0% 0% no-repeat;
+    display: block;
+    text-align: left;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-1 .slider-box-bianco p {
+    padding: 20px 9px 15px 13px !important;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    color: var(--color-blue);
+    font-size: 27px !important;
+    text-align: left !important;
+    line-height: 33px !important;
+    margin: 0;
+  }
+  .slide-1 .slider-box-bianco strong {
+    color: var(--color-blue);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .slide-3 .slider-box-blu {
+    position: absolute;
+    top: 371px;
+    left: 83px;
+    width: 127px;
+    height: 70px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 35px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-3 .slider-box-bianco {
+    position: absolute;
+    top: 426px;
+    left: 98px;
+    width: 721px;
+    height: 99px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 24px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-3 .slider-box-bianco p {
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-3 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  .slide-4 .slider-box-blu {
+    position: absolute;
+    top: 371px;
+    left: 78px;
+    width: 257px;
+    height: 70px;
+    background: transparent url('../images/Rettangolo-41.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 35px !important;
+    color: var(--color-white) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-4 .slider-box-bianco {
+    position: absolute;
+    top: 426px;
+    left: 93px;
+    width: 870px;
+    height: 99px;
+    background: transparent url('../images/Rettangolo-40.png') 0% 0% no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 24px !important;
+    pointer-events: auto;
+    margin: 0 !important;
+  }
+  .slide-4 .slider-box-bianco p {
+    font-family: var(--font-family-tenso) !important;
+    font-weight: var(--font-weight-light) !important;
+    font-size: 27px !important;
+    color: var(--color-blue) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-4 .slider-box-bianco p strong {
+    font-weight: var(--font-weight-medium) !important;
+  }
+
+  .slide-4 .slider-box-pilastro1 {
+    font-size: 29px;
+  }
+  .slide-4 .slider-box-pilastro1 strong {
+    font-weight: var(--font-weight-medium);
+  }
+} 

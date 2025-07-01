@@ -1,0 +1,696 @@
+/* ========================================
+   HEADER STYLES - IO BLUE CUSTOM THEME
+   ========================================
+   
+   Breakpoints based on design mockups:
+   - Desktop: ≥ 1920px
+   - Tablet: 768px - 1919px  
+   - Mobile: ≤ 767px (with specific 576px step)
+   
+   Mobile-first approach with progressive enhancement
+   ======================================== */
+
+/* ========================================
+   BASE STYLES (Mobile First - ≤ 767px)
+   ======================================== */
+
+/* Logo styles for mobile devices */
+.logo-desktop {
+  width: 267px;          /* Mobile logo width */
+  height: 188px;         /* Mobile logo height */
+  max-width: none;       /* Override any max-width constraints */
+  max-height: none;      /* Override any max-height constraints */
+  display: block;        /* Ensure block display */
+  object-fit: contain;   /* Maintain aspect ratio */
+}
+
+/* Language flags styling for mobile */
+.lang-desktop img {
+  width: 24px !important;   /* Bandiera più piccola */
+  height: 16px !important;  /* Bandiera più piccola */
+  display: inline-block;
+  object-fit: cover;
+}
+
+/* Navigation menu spacing for mobile */
+.menu.nav {
+  gap: 20px;                 /* Reduced gap for mobile */
+  flex-wrap: wrap;           /* Allow menu items to wrap if needed */
+}
+
+/* ========================================
+   TABLET STYLES (768px - 1919px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1919px) {
+  /* HEADER TABLET LAYOUT */
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    height: auto;
+  }
+  .header-logo {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding-top: 32px;
+    padding-left: 32px;
+  }
+  .header-right {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 32px 32px 0 0;
+  }
+  .header-lang {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: auto;
+    gap: 0;
+  }
+  .header-menu {
+    width: 100%;
+    justify-content: center !important;
+    align-items: center;
+    margin: 32px 0 0 0;
+    padding: 0 0 16px 0;
+  }
+  
+  /* Logo styles for tablet devices */
+  .logo-desktop {
+    width: 267px;            /* Same as mobile for tablet */
+    height: 188px;           /* Same as mobile for tablet */
+    /* Note: If design provides different tablet dimensions, update here */
+  }
+  
+  /* Language flags styling for tablet */
+  .lang-desktop img {
+    width: 24px !important;  /* Same flag size as mobile */
+    height: 16px !important; /* Same flag size as mobile */
+  }
+  
+  /* Navigation menu spacing for tablet */
+  .menu.nav {
+    gap: 30px;               /* Medium gap for tablet */
+  }
+
+  .hide-flags-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header-box {
+    display: flex !important;
+    align-items: center !important;
+    height: 175px !important;
+    min-height: 175px !important;
+    max-height: 175px !important;
+    padding-top: 0 !important;
+    padding-bottom: 16px !important;
+  }
+  .header-left {
+    position: relative !important;
+  }
+  .header-lang.d-lg-none {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .logo-desktop {
+    width: 220px !important;
+    height: 83px !important;
+    margin: 0 auto !important;
+  }
+  .menu.nav, .header-menu {
+    font-family: 'tenso', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* ========================================
+   DESKTOP STYLES (≥ 1920px)
+   ======================================== */
+
+@media (min-width: 1920px) {
+  
+  /* Logo styles for desktop devices */
+  .logo-desktop {
+    width: 306px;            /* Desktop logo width from design specs */
+    height: 264px;           /* Desktop logo height from design specs */
+    max-width: none;         /* Ensure no max-width constraints */
+    max-height: none;        /* Ensure no max-height constraints */
+  }
+  
+  /* Language flags styling for desktop */
+  .lang-desktop img {
+    width: 24px !important;  /* Flag width on desktop */
+    height: 16px !important; /* Flag height on desktop */
+  }
+  
+  /* Navigation menu spacing for desktop */
+  .menu.nav {
+    gap: 40px;               /* Larger gap for desktop */
+  }
+
+  .header-box {
+    height: 257px;
+    min-height: 257px;
+    max-height: 257px;
+  }
+}
+
+/* ========================================
+   EXTRA SMALL MOBILE STYLES (≤ 575px)
+   ======================================== */
+
+@media (max-width: 575px) {
+  
+  /* Additional styles for very small screens if needed */
+  .logo-desktop {
+    width: 200px;            /* Smaller logo for very small screens */
+    height: 141px;           /* Maintain aspect ratio */
+  }
+  
+  .menu.nav {
+    gap: 15px;               /* Minimal gap for very small screens */
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES & OVERRIDES
+   ======================================== */
+
+/* Ensure logo maintains aspect ratio across all devices */
+.logo-desktop {
+  aspect-ratio: 373/264;     /* Desktop aspect ratio */
+}
+
+/* Force language flags to display properly */
+.lang-desktop {
+  display: flex;             /* Flex container for flags */
+  align-items: center;       /* Center flags vertically */
+  gap: 8px;                  /* Space between flags */
+  list-style: none !important;
+}
+
+.lang-desktop li {
+  list-style: none !important;
+  margin-left: 0 !important;
+}
+
+/* Ensure navigation menu is properly aligned */
+.menu.nav {
+  align-items: center;       /* Center menu items vertically */
+  justify-content: center;   /* Center menu horizontally */
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+/* Hide elements on specific breakpoints if needed */
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   HEADER BOX STYLES (bordo blu solo sotto, variabile)
+   ======================================== */
+.header-box {
+  border: none;
+  border-bottom: 2px solid var(--primary-color); /* Solo bordo inferiore, colore da variabile */
+  padding: 32px 32px;
+  background: #fff;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Rimuovo sottolineatura dalle voci del menu */
+.menu.nav a {
+  text-decoration: none !important;
+  color: var(--primary-color) !important;
+}
+
+/* ========================================
+   HEADER INNER FLEX LAYOUT
+   ======================================== */
+.header-inner {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.header-lang {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin-left: 24px;
+  gap: 8px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* Nascondi il select lingua ovunque */
+.lang-select-tablet { display: none !important; }
+
+/* Responsive: logo e bandiere sempre centrati e accanto */
+@media (max-width: 767px) {
+  .header-top {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-lang {
+    margin-left: 12px;
+  }
+  .header-menu {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-top {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-lang {
+    margin-left: 24px;
+  }
+  .header-menu {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header-top {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-lang {
+    margin-left: 32px;
+  }
+  .header-menu {
+    margin-top: 32px;
+  }
+}
+
+/* ========================================
+   END HEADER STYLES
+   ======================================== */
+
+/* Forza dimensioni bandiere Polylang ovunque */
+.header-lang img,
+.lang-desktop img,
+.header-lang img.flag,
+.lang-desktop img.flag {
+  width: 48px !important;
+  height: 20px !important;
+  max-width: 48px !important;
+  max-height: 20px !important;
+  min-width: 48px !important;
+  min-height: 20px !important;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* Inverti l'ordine delle bandiere (prima in basso, poi in alto) */
+.header-lang,
+.lang-desktop {
+  flex-direction: column-reverse !important;
+}
+
+/* ========================================
+   MENU: font Tenso Light 24px
+   ======================================== */
+.menu.nav, .header-menu {
+  font-family: 'tenso', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+}
+
+/* --- LAYOUT DESKTOP (≥992px) --- */
+@media (min-width: 992px) {
+  .header-box {
+    display: flex !important;
+    align-items: center !important;
+    height: 248px !important;
+    min-height: 248px !important;
+    max-height: 248px !important;
+    padding-top: 0 !important;
+    padding-bottom: 8px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .header-flex {
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .header-left {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+  }
+  .header-right {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column;
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+  .logo-desktop {
+    width: 306px !important;
+    height: 115px !important;
+    max-width: 306px !important;
+    max-height: 115px !important;
+    min-width: 306px !important;
+    min-height: 115px !important;
+    object-fit: contain;
+    display: block;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  .header-lang.d-none.d-lg-flex {
+    margin: 0 0 8px 0 !important;
+  }
+  .header-menu, .menu.nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap !important;
+    width: auto;
+  }
+  .header-left .header-lang { display: none !important; }
+  .header-lang.d-none.d-lg-flex li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .header-menu {
+    justify-content: flex-end !important;
+    text-align: right !important;
+    width: 100%;
+  }
+  .header-menu ul {
+    justify-content: flex-end !important;
+    text-align: right !important;
+    width: 100%;
+  }
+}
+
+/* --- LAYOUT TABLET & MOBILE (<991.98px) --- */
+@media (max-width: 991.98px) {
+  .header-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    position: relative;
+    padding-top: 25px;
+  }
+  .header-left {
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+  .header-right {
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    margin: 0;
+  }
+  .header-lang.d-lg-none {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 16px;
+    gap: 8px;
+    position: static;
+  }
+  .header-lang.d-none.d-lg-flex {
+    display: none !important;
+  }
+  .header-lang.d-lg-none li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .header-menu {
+    width: 100%;
+    justify-content: center !important;
+    margin-top: 24px;
+    position: static;
+  }
+}
+
+/* Nascondi il select lingua ovunque */
+.lang-select-tablet { display: none !important; }
+
+.container-fluid { padding-top: 0 !important; margin-top: 0 !important; }
+
+@media (min-width: 1200px) {
+  .header-flex {
+    align-items: center !important;
+    padding-top: 26px;
+  }
+}
+
+/* Burger menu visibile solo su mobile, colore blu */
+.navbar-toggler {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  width: 32px;
+  height: 32px;
+  background-image: none !important;
+  position: relative;
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #006798;
+  border-radius: 2px;
+  margin: 5px 0;
+}
+.navbar-toggler-icon span {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* --- LAYOUT MOBILE (≤ 767.98px) --- */
+@media (max-width: 767.98px) {
+  .header-left {
+    min-height: 175px !important;
+    height: 175px !important;
+    position: relative !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .logo-desktop {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+    width: 220px !important;
+    height: 83px !important;
+    max-width: 220px !important;
+    max-height: 83px !important;
+    min-width: 220px !important;
+    min-height: 83px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+  .navbar-toggler {
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 3 !important;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background: none !important;
+    width: 36px;
+    height: 24px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  .navbar-toggler .navbar-toggler-icon:before,
+  .navbar-toggler .navbar-toggler-icon:after,
+  .navbar-toggler .navbar-toggler-icon span {
+    content: '';
+    display: block;
+    background: #000 !important;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .navbar-toggler .navbar-toggler-icon:before {
+    top: 0;
+  }
+  .navbar-toggler .navbar-toggler-icon span {
+    top: 10px;
+  }
+  .navbar-toggler .navbar-toggler-icon:after {
+    top: 20px;
+  }
+  .header-lang.d-lg-none {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 3 !important;
+    max-width: 48px !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+    margin-left: 0 !important;
+    grid-column: unset !important;
+    justify-self: unset !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .header-lang.d-lg-none img {
+    width: 20px !important;
+    height: 14px !important;
+    min-width: 20px !important;
+    min-height: 14px !important;
+    max-width: 20px !important;
+    max-height: 14px !important;
+  }
+  .navbar-toggler .custom-burger {
+    display: block;
+    width: 36px;
+    height: 24px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .navbar-toggler .custom-burger span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #888;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .navbar-toggler .custom-burger span:nth-child(1) { top: 0; }
+  .navbar-toggler .custom-burger span:nth-child(2) { top: 10px; }
+  .navbar-toggler .custom-burger span:nth-child(3) { top: 20px; }
+  .header-box,
+  .header-menu-mobile,
+  .header-menu-mobile ul,
+  .header-menu-mobile li,
+  .header-menu-mobile a {
+    font-family: "tenso", "Tenso", "Tenso Light", Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 17px !important;
+    letter-spacing: 0.01em;
+  }
+  .header-box {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Colore rosa hover su tutti i menu */
+.header-menu a:hover,
+.header-menu-mobile a:hover,
+.menu a:hover,
+.nav a:hover,
+.header-menu a:focus,
+.header-menu-mobile a:focus,
+.menu a:focus,
+.nav a:focus {
+  color: var(--pink) !important;
+  transition: color 0.2s;
+}
+
+.header-maxwidth {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
