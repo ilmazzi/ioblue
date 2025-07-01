@@ -1,0 +1,94 @@
+/* Struttura footer con cerchio bianco a sinistra e logo centrato dentro il cerchio */
+.site-footer {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  margin-top: 32px;
+  padding-left: 80px;
+}
+.footer-bar {
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+  position: relative;
+}
+.footer-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px #fff;
+  margin-left: -100px;
+}
+.footer-logo {
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-left: 30px;
+}
+.footer-content {
+  flex: 1;
+  background: linear-gradient(90deg, #e5afb9 0%, #7ea3bb 100%);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  margin-left: -80px;
+  padding-left: 120px;
+  border-radius: 0 20px 20px 0;
+}
+.footer-logo-wrap {
+  position: relative;
+  z-index: 3;
+  padding-left: 70px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.footer-legal-text {
+  color: #fff;
+  font-family: 'tenso', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+  .site-footer {
+    padding-left: 16px;
+  }
+  .footer-bar {
+    padding: 20px 0 0 0;
+    min-height: 160px;
+  }
+  .footer-circle {
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+  }
+  .footer-content {
+    min-height: 160px;
+  }
+  .footer-logo {
+    max-width: 90px;
+    max-height: 90px;
+    margin-left: 20px;
+  }
+  .footer-legal-text {
+    font-size: 13px;
+    word-break: break-word;
+    white-space: normal;
+  }
+}

@@ -1,3 +1,10 @@
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
 /* Home page background section - esagoni */
 .bg-home-background {
   width: 100vw;
@@ -6,29 +13,26 @@
 
 .bg-home-background-inner {
   max-width: 1920px;
-  margin: 0 auto;
-  width: 100%;
-  aspect-ratio: 1920/600;
-  background-image: url('../images/bg-home.svg');
+  background-image: url('../images/bg-home.png');
   background-size: cover;
-  background-position: center top;
   background-repeat: no-repeat;
-  display: block;
-  position: relative;
+  position: absolute;
   padding-top: 180px;
+  object-position: center;
 }
 
-/* Media query per tablet */
-@media (max-width: 991.98px) {
-  .bg-home-background-inner {
-    aspect-ratio: 1024/500;
-  }
-}
+
 
 /* Media query mobile e small device */
 @media (max-width: 575.98px) {
-  .bg-home-background-inner {
-    aspect-ratio: 390/400;
+  .swiper,
+  .slider-fullwidth {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   .home-hero-text {
     position: absolute;
@@ -38,7 +42,7 @@
     height: auto;
     font-family: 'tenso', Arial, sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
     color: #006798;
     text-align: center;
@@ -51,6 +55,10 @@
   .home-hero-text strong {
     font-weight: 500;
     color: #006798;
+  }
+  .swiper-slide {
+    background-size: cover !important;
+    background-position: center !important;
   }
 }
 
@@ -83,6 +91,7 @@
   .home-hero-text {
     font-family: 'tenso', Arial, sans-serif;
     font-weight: 300;
+    
     font-size: 1.6vw;
     line-height: 1.9vw;
     color: #006798;
@@ -104,7 +113,7 @@
 
 @media (min-width: 992px) {
   .cosa-facciamo-row {
-    margin-top: 11% !important;
+    margin-top: 8% !important;
   }
   .cosa-facciamo-titolo {
     width: 374px;
@@ -122,6 +131,8 @@
     margin-top: -2%;
   }
   .cosa-facciamo img {
+    width: 455px;
+    height: 523px;
     box-shadow: -5px 5px 40px rgba(0,0,0,0.25);
 }
 .cosa-facciamo-lista {
@@ -194,6 +205,9 @@
 }
 
 @media (max-width: 575.98px) {
+  .cosa-facciamo-row {
+    margin-top: 8% !important;
+  }
   .cosa-facciamo-titolo {
     width: 180px;
     height: 58px;
@@ -209,11 +223,12 @@
     margin-left: 10%;
     margin-top: -2%;
   }
-  .cosa-facciamo img {
+  .cosa-facciamo div img {
     width: 223px;
     height: 223px;
     object-fit: cover;
     margin-left: 10%;
+    margin-right: 16%;
     border-radius: 2%;
     box-shadow: -5px 5px 40px rgba(0,0,0,0.25);
   }
@@ -241,6 +256,7 @@
     width: 30px;
     height: 30px;
     margin-left: 0%;
+    margin-right: 3%;
   }
   .cosa-facciamo-testo {
 margin-top: 2%;
@@ -249,8 +265,9 @@ margin-top: 2%;
 }
 
 @media (min-width: 992px) {
+
   .rd {
-    margin-top: 11%;
+    margin-top: 10.8%;
   }
   .rd-titolo {
     width: 374px;
@@ -285,9 +302,11 @@ margin-top: 2%;
     font-weight: var(--font-weight-medium);
   }
   .rd img {
-    width: 100%;
-    height: 100%;
+    width: 583px;
+    height: 523px;
     text-align: right;
+    border-radius: 2%;
+    box-shadow: -5px 5px 40px rgba(0,0,0,0.25);
   }
   
   
@@ -307,7 +326,7 @@ margin-top: 2%;
     text-align: center  ;
     padding-top: 3%;
     margin-top: -2%;
-    margin-left: 30%;
+    margin-left: 10%;
   }
   .rd-testo {
     font-family: 'tenso', Arial, sans-serif;
@@ -335,3 +354,153 @@ margin-top: 2%;
   } 
 }
 
+@media (max-width: 575.98px) {
+  .rd-titolo {
+    width: 180px;
+    height: 58px;
+    background-image: url('../images/box-titolo-blu.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+    margin-left: 12%;
+    margin-top: -2%;
+  }
+  .rd-testo {
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 12px;
+    color: #006798;
+    text-align: center;
+    padding-left: 10%;
+    padding-bottom: 10%;
+  }
+  .rd img {
+    width: 223px;
+    height: 223px;
+    object-fit: cover;
+
+    border-radius: 2%;
+    box-shadow: -5px 5px 40px rgba(0,0,0,0.25);
+  }
+  .rd {
+    margin-top: 15%;
+  }
+  .rd-testo strong {
+    font-weight: var(--font-weight-medium);
+  }
+
+
+}
+
+@media (min-width: 992px) {
+  .cl-titolo {
+    width: 374px;
+    height: 110px;
+    background-image: url('../images/box-titolo-blu.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: -2%;
+  }
+  .cl-testo {
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 30px;
+    color: #006798;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .cl-testo strong {
+    font-weight: var(--font-weight-medium);
+  }
+  .cl {
+    margin-top: 11%;
+  }
+  .cl-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cl-titolo {
+    width: 250px;
+    height: 73px;
+    background-image: url('../images/box-titolo-blu.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    margin-top: -2%;
+    margin-left: 30%;
+  }
+  .cl-testo {
+    font-family: 'tenso', Arial, sans-serif;
+    font-weight: var(--font-weight-light);
+    font-size: 19px;
+    color: #006798;
+    text-align: center;
+    margin-left: 8%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  .cl-testo strong {
+    font-weight: var(--font-weight-medium);
+  }
+
+  }
+  @media (max-width: 575.98px) {
+    .cl-titolo {
+      width: 200px;
+      height: 58px;
+      background-image: url('../images/box-titolo-blu.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-family: 'tenso', Arial, sans-serif;
+      font-weight: var(--font-weight-light);
+      font-size: 20px;
+      color: white;
+      padding-left: 6%;
+      padding-top: 4%;
+      margin: 0 auto;
+      margin-top: -2%;
+      align-items: center;
+      padding-bottom: 10%;
+      
+    }
+ .cl-testo {
+ margin: 0 auto;
+  font-family: 'tenso', Arial, sans-serif;
+  font-weight: var(--font-weight-light);
+  font-size: 12px;
+  color: #006798;
+  text-align: center;
+  padding-left: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+ }
+ .cl-testo strong {
+  font-weight: var(--font-weight-medium);
+ }
+ .cl {
+  margin-top: 15%;
+ }
+  }

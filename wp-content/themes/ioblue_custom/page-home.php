@@ -78,34 +78,14 @@ get_header(); ?>
   </div>
 
   <!-- SEZIONE HERO TEXT - SOLO BOOTSTRAP -->
-  <section class="bg-home-background">
+  <section class="bg-home-background col">
     <div class="bg-home-background-inner position-relative">
       <!-- Hero Text con solo Bootstrap -->
-      <div class="home-hero-text position-absolute text-center text-primary fw-light d-md-none"
-        style="font-family: 'tenso', Arial, sans-serif; color: #006798 !important; z-index: 2; top: 10vw; left: 2vw; width: 96vw; font-size: 14px; line-height: 16px;">
-        Siamo presenti sul <strong class="fw-medium">mercato farmaceutico dal 2016</strong><br>
-        con l'<strong class="fw-medium">obiettivo</strong> di essere un partner forte per lo <strong
-          class="fw-medium">sviluppo del business</strong><br>
-        delle piccole e delle medie imprese nel <strong class="fw-medium">settore healthcare</strong>.<br><br>
-        <strong class="fw-medium">Connettiamo aziende nazionali ed internazionali</strong><br>
-        offrendo soluzioni per favorire collaborazioni strategiche.
-      </div>
-      <!-- Tablet version -->
-      <div class="home-hero-text position-absolute text-center text-primary fw-light d-none d-md-block d-lg-none"
-        style="font-family: 'tenso', Arial, sans-serif; color: #006798 !important; z-index: 2; top: 7vw; left: 5vw; width: 90vw; font-size: 18px; line-height: 21px;">
-        Siamo presenti sul <strong class="fw-medium">mercato farmaceutico dal 2016</strong><br>
-        con l'<strong class="fw-medium">obiettivo</strong> di essere un partner forte per lo <strong
-          class="fw-medium">sviluppo del business</strong><br>
-        delle piccole e delle medie imprese nel <strong class="fw-medium">settore healthcare</strong>.<br><br>
-        <strong class="fw-medium">Connettiamo aziende nazionali ed internazionali</strong><br>
-        offrendo soluzioni per favorire collaborazioni strategiche.
-      </div>
+     
       <!-- Desktop version -->
-      <div class="home-hero-text text-center text-primary fw-light d-none d-lg-block mx-auto mb-5"
-        style="font-family: 'tenso', Arial, sans-serif; color: #006798 !important; z-index: 2; font-size: 1.6vw; line-height: 1.9vw; max-width: 70vw;">
+      <div class="home-hero-text text-center ">
         Siamo presenti sul <strong class="fw-medium">mercato farmaceutico dal 2016</strong><br>
-        con l'<strong class="fw-medium">obiettivo</strong> di essere un partner forte per lo <strong
-          class="fw-medium">sviluppo del business</strong><br>
+        con l'<strong class="fw-medium">obiettivo</strong> di essere un partner forte per lo <strong class="fw-medium">sviluppo del business</strong><br>
         delle piccole e delle medie imprese nel <strong class="fw-medium">settore healthcare</strong>.<br><br>
         <strong class="fw-medium">Connettiamo aziende nazionali ed internazionali</strong><br>
         offrendo soluzioni per favorire collaborazioni strategiche.
@@ -122,7 +102,7 @@ background: linear-gradient(
   transparent 100%
 );
 ">
-        <div class="col-5 col-md-4 col-lg-4" ">
+        <div class="col-5 col-md-4 col-lg-4 cosa-facciamo-img">
           <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/team-meeting.png" class="img-fluid"
           alt="Team meeting">
         </div>
@@ -157,18 +137,60 @@ background: linear-gradient(
 );
 ">
        
-        <div class="col-7 col-md-7 rd-col">
+        <div class="col-6 col-md-7 col-lg-8 rd-col">
           <h2 class="rd-titolo">R&D</h2>
-          <p class="rd-testo"> Grazie alla nostra <strong>rete di esperti</strong> e alle collaborazioni <br> con impianti produttivi all’avanguardia,<br> possiamo supportarvi nello <strong> sviluppo di prodotti personalizzati</strong>, 
-          <strong>specificamente pensati</strong> per il <strong>settore della dermocosmesi <br>e della nutraceutica</strong>.</p>
+          <p class="rd-testo"> Grazie alla nostra <strong>rete di esperti</strong> e alle collaborazioni  con impianti produttivi all'avanguardia, possiamo supportarvi nello <strong> sviluppo di prodotti personalizzati</strong>, 
+          <strong>specificamente pensati</strong> per il <strong>settore della dermocosmesi e della nutraceutica</strong>.</p>
         </div> 
-        <div class="col-5 col-md-5 col-lg-4 rd-img" >
+        <div class="col-6 col-md-5 col-lg-4 rd-img" >
           <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/r&d-home.png" class="img-fluid"
           alt="Team meeting">
         </div>
+      </div>
+      <div class="row  rd d-flex justify-content-center" style="
+background: linear-gradient(
+  to bottom,
+  transparent 0,
+  transparent 16px,
+  rgba(0, 103, 152, 0.1) 16px,
+  rgba(0, 103, 152, 0.1) calc(100% - 16px),
+  transparent calc(100% - 16px),
+  transparent 100%
+);
+">
+       
+        <div class="col-6 col-md-7 col-lg-8 rd-col">
+          <h2 class="cl-titolo">COME LAVORIAMO</h2>
+          <p class="cl-testo"><strong>IOBLUE</strong> è un'azienda di servizi che, grazie a <strong> di fiducia consolidati nel tempo</strong>, con i suoi partners, <strong>guida le aziende verso accordi di valore</strong>, eliminando rischi e <strong>garantendo qualità e supporto continuo</strong>. 
+          <strong><br> <br>Il costante follow-up fa parte del nostro impegno.</strong></p>
+        </div> 
+       
       </div>
     </div>
   </section>
 </main>
 
 <?php get_footer(); ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleziona tutte le box animate
+  const boxes = document.querySelectorAll('.slider-box-rosa, .slider-box-bianco, .slider-box-blu');
+  // Seleziona tutti i titoli da animare
+  const titles = document.querySelectorAll('.cosa-facciamo-titolo, .rd-titolo, .cl-titolo');
+  const animations = ['fade-in-up', 'fade-in-down', 'fade-in-left', 'fade-in-right'];
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const anim = animations[Math.floor(Math.random() * animations.length)];
+        entry.target.classList.add(anim);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  boxes.forEach(box => observer.observe(box));
+  titles.forEach(title => observer.observe(title));
+});
+</script>
