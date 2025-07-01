@@ -1,0 +1,68 @@
+/* ==================================================
+   VARIABLES CSS
+   Contiene tutte le variabili globali riutilizzabili 
+   nel progetto: colori, font, spacing, breakpoint.
+   ================================================== */
+
+:root {
+  /* Colors */
+  --primary-color: #006798;
+  --primary-color-transparent: #0067980A;
+  --pink: #E5AFB9;
+  --background-color: #FFFFFF;
+  --text-color: #707070;
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-family-base: Tenso, Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-size-large: 47px;
+  --font-size-medium: 28px;
+  --font-size-base: 16px;
+  --line-height-large: 59px;
+  --line-height-medium: 35px;
+  --letter-spacing-normal: 0px;
+
+  /* -----------------------------------------------
+     PALETTE COLORI
+     ----------------------------------------------- */
+  --color-light: #ffffff;
+  --color-dark: #707070;
+  --color-bg-light: #f7f7f7;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* -----------------------------------------------
+     TIPOGRAFIA
+     ----------------------------------------------- */
+  --font-size-small: 14px;
+  --font-size-xlarge: 47px;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.2;
+
+  /* -----------------------------------------------
+     SPACING (margini e padding)
+     ----------------------------------------------- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* -----------------------------------------------
+     LARGHEZZE HEADER E CONTAINER
+     ----------------------------------------------- */
+  --container-max-width: 1920px;
+
+  /* -----------------------------------------------
+     BREAKPOINT RESPONSIVE (da Adobe XD)
+     ----------------------------------------------- */
+  --breakpoint-mobile-max: 576px;   /* max per mobile */
+  --breakpoint-tablet-max: 768px;   /* max per tablet */
+  --breakpoint-desktop-min: 769px;  /* da desktop in su */
+}
+  

@@ -1,0 +1,63 @@
+/* ========================================
+   FONT: TENSO (Adobe Fonts)
+   https://use.typekit.net/xdt6wwj.css
+   ======================================== */
+
+.font-tenso {
+  font-family: 'tenso', sans-serif;
+}
+
+.font-tenso-light {
+  font-family: 'tenso', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.font-tenso-light-italic {
+  font-family: 'tenso', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.font-tenso-regular {
+  font-family: 'tenso', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-tenso-italic {
+  font-family: 'tenso', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-tenso-medium {
+  font-family: 'tenso', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.font-tenso-medium-italic {
+  font-family: 'tenso', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.font-tenso-bold {
+  font-family: 'tenso', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.font-tenso-bold-italic {
+  font-family: 'tenso', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.font-tenso-black {
+  font-family: 'tenso', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.font-tenso-black-italic {
+  font-family: 'tenso', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+} 

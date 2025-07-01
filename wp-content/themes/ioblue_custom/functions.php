@@ -111,3 +111,15 @@ function ioblue_custom_enqueue_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_assets');
+
+function ioblue_custom_enqueue_styles() {
+    wp_enqueue_style('ioblue-slider', get_template_directory_uri() . '/assets/css/slider.css', array(), null);
+}
+add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_styles');
+
+function ioblue_custom_enqueue_swiper() {
+    wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('ioblue-slider', get_template_directory_uri() . '/assets/js/slider.js', array('swiper'), null, true);
+}
+add_action('wp_enqueue_scripts', 'ioblue_custom_enqueue_swiper');
